@@ -21,7 +21,7 @@ TIMEZONE = 'CET'
 API_KEY = os.getenv('API_FOOTBALL_KEY', '')
 FOOTBALL_API_BASE = "https://api.api-football.com/v3"
 
-async def get_matches_today():
+ def get_matches_today():
     """Fetch matches for today from API"""
     try:
         today = datetime.now(pytz.timezone(TIMEZONE)).strftime('%Y-%m-%d')
